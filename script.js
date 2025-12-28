@@ -85,22 +85,12 @@ function updateProjectCards() {
         const isPlaced = scrollProgress >= triggerOffset + placementDuration;
         
         if (isPlaced) {
-            // Card is placed and sticky
-            const thumbnail = card.querySelector('.project-thumbnail');
-            const title = card.querySelector('.project-title');
-            
-            // Debug BEFORE making changes
-            const beforeRect = card.getBoundingClientRect();
-            const beforeStyles = window.getComputedStyle(card);
             
             card.classList.remove('entering', 'placing');
             card.classList.add('placed');
             stickyCardIndex = index;
             card.classList.add('clickable');
-            
-            // Clear ALL inline positioning styles - let CSS class handle everything
-            // This is critical: inline styles override CSS, so we need to remove them
-            // The CSS class .project-card.placed will handle all positioning
+
             card.style.position = '';
             card.style.top = '';
             card.style.left = '';
@@ -202,7 +192,42 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Typewriter animation for about text
     initTypewriter();
+    
+    // Initialize video playback control
+    initVideoPlayback();
 });
+
+// Video playback control - only play videos when visible
+function initVideoPlayback() {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+                // Video is visible, play it
+                video.play().catch(err => {
+                    // Ignore autoplay errors
+                    console.log('Video autoplay prevented:', err);
+                });
+            } else {
+                // Video is not visible, pause it to save performance
+                video.pause();
+            }
+        });
+    }, {
+        threshold: [0, 0.3, 0.7, 1.0],
+        rootMargin: '0px'
+    });
+    
+    // Observe all videos in project cards
+    const videos = document.querySelectorAll('.project-thumbnail video');
+    videos.forEach(video => {
+        // Ensure videos are muted and looping
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        videoObserver.observe(video);
+    });
+}
 
 // Typewriter animation for code content
 function initTypewriter() {
