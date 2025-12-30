@@ -3,51 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Management App - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Misty Robot - Portfolio</title>
+    <link rel="stylesheet" href="project-styles.css">
 </head>
 <body>
-    <section class="project-detail">
-        <div class="detail-container">
-            <a href="index.html" class="back-link">Back to Projects</a>
-            
-            <h1 class="detail-title">Task Management App</h1>
-            
-            <div class="detail-thumbnail">
-                <span>✅</span>
+    <div class="project-detail-page">
+        <a href="index.html" class="back-link">← Back to Projects</a>
+        
+        <div class="project-header">
+            <h1>Misty Robot</h1>
+        </div>
+        
+        <div class="project-video-container">
+            <video muted loop playsinline autoplay>
+                <source src="videos/misty.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="project-content">
+            <div class="project-description-section">
+                <h2>Description</h2>
+                <p>A real-time audio-video streaming and transcription platform built for the Misty II robot. The project establishes a continuous media pipeline using FFmpeg, streams audio and video output to a client, and integrates speech-to-text processing to enable live captioning and voice interaction.
+                    I worked on this project during my time at the Human-Robot Interaction lab at UChicago, where it was to be used in a study that was researching the effect that a robot lecturer would have on a child's ability to learn social-emotional learning in a group setting.
+                </p>
             </div>
             
-            <div class="detail-description">
-                A collaborative task management tool designed for teams to organize, track, and complete 
-                projects efficiently. Features real-time updates, intuitive drag-and-drop functionality, 
-                and seamless team collaboration features.
-            </div>
-            
-            <div class="detail-section">
-                <h3>Features</h3>
-                <ul style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-left: 20px;">
-                    <li>Real-time task synchronization across team members</li>
-                    <li>Drag-and-drop task organization</li>
-                    <li>Team collaboration and assignment features</li>
-                    <li>Project boards and kanban views</li>
-                    <li>Deadline tracking and reminders</li>
-                    <li>File attachments and comments</li>
-                    <li>Activity timeline and notifications</li>
+            <div class="project-features">
+                <h2>Features</h2>
+                <ul>
+                    <li>Dual-Speaker Conversational Intelligence
+                        <ul>
+                            <li>
+                                Implements audio localization and adaptive dialogue flow to allow Misty to identify, track, and respond to two students at once. The system determines who is speaking and orients Misty's body and head accordingly, enabling natural turn-taking and maintaining engagement with both participants.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>AI-Powered Speech Recognition & Dialogue Generation
+                        <ul>
+                            <li>
+                                Integrates Rev.ai for real-time transcription and OpenAI/Gemini for language generation, enabling Misty to understand student speech and respond contextually. Supports SEL-focused dialogue, question answering, and spontaneous conversation rather than pre-scripted behaviors.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Social-Norm Monitoring & Intervention Logic
+                        <ul>
+                            <li>
+                                Detects moments where conversation patterns suggest interruptions, rudeness, or off-task behavior. Misty can gently intervene, redirect discourse, or mediate conflict, demonstrating awareness of social context and providing a foundation for future autonomous SEL facilitation.
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             
-            <div class="detail-section">
-                <h3>Technologies Used</h3>
-                <div class="detail-tags">
-                    <span class="detail-tag">Vue.js</span>
-                    <span class="detail-tag">Firebase</span>
-                    <span class="detail-tag">TypeScript</span>
-                    <span class="detail-tag">Vuex</span>
-                    <span class="detail-tag">Firestore</span>
+            <div class="project-technologies">
+                <h2>Technologies Used</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">Misty Robot</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Rev.ai</span>
+                    <span class="tech-tag">OpenAI</span>
+                    <span class="tech-tag">Gemini</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
-

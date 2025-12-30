@@ -3,52 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Platform - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Dev Simplified - Portfolio</title>
+    <link rel="stylesheet" href="project-styles.css">
 </head>
 <body>
-    <section class="project-detail">
-        <div class="detail-container">
-            <a href="index.html" class="back-link">Back to Projects</a>
-            
-            <h1 class="detail-title">E-Commerce Platform</h1>
-            
-            <div class="detail-thumbnail">
-                <span>📦</span>
+    <div class="project-detail-page">
+        <a href="index.html" class="back-link">← Back to Projects</a>
+        
+        <div class="project-header">
+            <h1>Dev Simplified</h1>
+        </div>
+        
+        <div class="project-video-container">
+            <video muted loop playsinline autoplay>
+                <source src="videos/algo-vis.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="project-content">
+            <div class="project-description-section">
+                <h2>Description</h2>
+                <p>DevSimplified is an interactive platform designed to make problem-solving visual, intuitive, and interview-ready.
+                    We combine real-time algorithm visualization with AI-powered mock interviews to help learners bridge the gap between theory and real-world interview performance.
+                    In collaboration with 4 other students (one of which, worked with me on the algorithm visualization) Dev Simplified was submitted to the UChicago tech showcase where it won the People's Choice Award in competition with 10+ other teams. 
+                </p>
             </div>
             
-            <div class="detail-description">
-                A full-stack e-commerce solution built with modern web technologies, featuring 
-                seamless payment integration, comprehensive inventory management, and robust user 
-                authentication. This platform provides a scalable foundation for online retail businesses.
-            </div>
-            
-            <div class="detail-section">
-                <h3>Features</h3>
-                <ul style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-left: 20px;">
-                    <li>Secure payment processing with Stripe integration</li>
-                    <li>Real-time inventory management and tracking</li>
-                    <li>User authentication and authorization system</li>
-                    <li>Shopping cart and checkout functionality</li>
-                    <li>Product search and filtering capabilities</li>
-                    <li>Order management dashboard</li>
-                    <li>Responsive design for all devices</li>
+            <div class="project-features">
+                <h2>Features</h2>
+                <ul>
+                    <li> Dynamic Code-to-Visual Sync
+                        <ul>
+                            <li>Users write code (e.g., DFS, Dijkstra’s, Bellman-Ford) in an embedded IDE, and the system animates the algorithm (e.g., node traversal, distance updates) in real-time to match their implementation.</li>
+                        </ul>
+                    </li>
+                    <li>Interactive Graph Algorithms Guide
+                        <ul>
+                            <li>A structured walkthrough of fundamental graph algorithms such as DFS, BFS, Dijkstra, and more. Each algorithm includes a visual explanation and small examples to build intuition before diving into implementation. Designed to help users understand the logic step-by-step rather than just reading code.</li>
+                        </ul>
+                    </li>
+                    <li>Fully Customizable Graph Builder
+                        <ul>
+                            <li>Create graphs tailored to your experiments by freely dragging nodes, adjusting edges, and shaping layouts in real time. Use the dropdown menu to instantly switch between preset structures (like trees, circular graphs, directed graphs, etc.), providing a flexible environment for learning, testing, and visualizing algorithm behavior.</li>
+                        </ul>
+                    </li>
+                    <li>(I only worked on this feature breifly) Interactive AI Tutor (Chatbot Sidebar) 
+                        <ul>
+                            <li>Users can ask questions mid-execution (e.g., “Why is this node visited first?”), and the AI explains each step, suggests optimizations, and provides pseudocode comparisons, with difficulty tiers ranging from Beginner (BFS, Sorting) to Advanced (DP, Graph Theory)</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             
-            <div class="detail-section">
-                <h3>Technologies Used</h3>
-                <div class="detail-tags">
-                    <span class="detail-tag">React</span>
-                    <span class="detail-tag">Node.js</span>
-                    <span class="detail-tag">MongoDB</span>
-                    <span class="detail-tag">Express</span>
-                    <span class="detail-tag">Stripe API</span>
-                    <span class="detail-tag">JWT Authentication</span>
+            <div class="project-technologies">
+                <h2>Technologies Used</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">vite + React.js</span>
+                    <span class="tech-tag">Cytoscape.js</span>
+                    <span class="tech-tag">CodeMirror</span>
+                    <span class="tech-tag">Deepseek model (via OpenRouter)</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
-
