@@ -21,7 +21,13 @@ body {
     padding: 0;
 }
 
+a {
+    color: var(--white);
+}
 
+a:hover {
+    color: var(--gray);
+}
 
 /* Project Detail Page Container */
 .project-detail-page {
